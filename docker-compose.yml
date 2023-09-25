@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  samba:
+    build: ./
+    container_name: samba
+    tty: true
+    volumes:
+      - ./smb.conf:/etc/samba/smb.conf
+      - ./shares:/shares
+    ports:
+      - 139:139
+      - 445:445
