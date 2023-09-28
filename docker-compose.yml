@@ -2,12 +2,24 @@ version: '3'
 
 services:
   samba:
-    build: ./
-    container_name: samba
+    build: .
+    container_name: samba_server
     tty: true
-    volumes:
-      - ./smb.conf:/etc/samba/smb.conf
-      - ./shares:/shares
     ports:
       - 139:139
       - 445:445
+    volumes:
+      - ./shares/public:/mnt
+      - ./shares/private:/mn2
+      - ./shares/usr1:/mnt3
+      - ./shares/usr2:/mnt4
+      - ./samba_conf/samba:/etc/samba/
+    environment:
+      - TZ=EST5EDT
+      - USER=admin;xpto
+      - USER2=usr1;xpto
+      - USER3=usr2;xpto
+      - WORKGROUP=WORKGROUP
+
+ADMIN N ENTRA NOS USERS
+PASTA DO ADMIN N DA
