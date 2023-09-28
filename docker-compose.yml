@@ -10,7 +10,7 @@ services:
       - 445:445
     volumes:
       - ./shares/public:/mnt
-      - ./shares/private:/mn2
+      - ./shares/private:/mnt2
       - ./shares/usr1:/mnt3
       - ./shares/usr2:/mnt4
       - ./samba_conf/samba:/etc/samba/
@@ -21,5 +21,4 @@ services:
       - USER3=usr2;xpto
       - WORKGROUP=WORKGROUP
 
-ADMIN N ENTRA NOS USERS
-PASTA DO ADMIN N DA
+# todo: verificar os acessos as pastas
